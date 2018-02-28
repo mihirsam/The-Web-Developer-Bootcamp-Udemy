@@ -1,0 +1,23 @@
+h3{
+  color : #FF0000;
+  background: rgb(0, 0, 0, 0.7);
+}
+
+li{
+  color : gold;
+  background: rgb(0,0,0,0.7);
+}
+
+img{
+  border-width: 5px;
+  border-color: yellow;
+  border-style: groove;
+}
+
+body{
+  /*
+  background: url(http://clipground.com/images/red-and-white-checkers-clipart-8.jpg);
+  */
+  background: url(img.jpg);
+  background-size: cover;
+}
