@@ -1,0 +1,17 @@
+p{
+  border: 2px solid red;
+  width: 150px;
+  margin: 100px auto;
+  /*
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  */
+
+  padding: 10px 20px 10px 10px;
+}
+
+body{
+  background-color: grey;
+}
