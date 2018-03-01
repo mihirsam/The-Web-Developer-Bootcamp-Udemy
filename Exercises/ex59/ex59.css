@@ -1,0 +1,27 @@
+img{
+  width: 30%;
+  height: 267px;
+  float : left;
+  margin: 1.6%;
+}
+.first{
+
+}
+
+.image{
+  /*border: 2px solid red;
+
+  width: 90%;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 50px;*/
+}
+
+h2{
+  font-family: 'Kanit', sans-serif;
+  width: 30%;
+  font-size: 50px;
+  border-bottom: 2px solid rgb(211,211,211, 0.6);
+  padding-bottom: 5px;
+  margin-left: 1.66%;
+}
