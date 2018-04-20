@@ -16,6 +16,7 @@ while(true)
     {
         console.log("["+i+"] : "+todoList[i]);
     }
+    console.log("\n\n")
   }
 
   else if (choice == "delete")
