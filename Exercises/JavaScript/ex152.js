@@ -1,14 +1,13 @@
 console.log("JS connected !");
 var flag = 0, blinkCount = 0, imgCount = 3;
 
-
-if(blinkCount == 15)
 var colors = ["#0af5fa", "#0ab1fa", "#0a3efa", "#560afa", "#b70afa", "#fa0ad9", "#fa0a65", "#fa0a1e", "#fa5e0a", "#facc0a", "#cbfa0a", "#69fa0a", "#0afa1b", "#0afa77", "#0afae5", "#0a8efa"];
 
 setInterval(blink, 100);
 
 function blink()
 {
+  if(blinkCount==15)
   {
     blinkCount = 0;
   }

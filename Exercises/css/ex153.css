@@ -1,0 +1,15 @@
+button{
+  width: 50%;
+  height: 100px;
+  background: black;
+  margin-top: 300px;
+  margin-left: 25%;
+}
+
+h1{
+  color: #0af5fa;
+}
+
+body{
+  background: #0af5fa;
+}
