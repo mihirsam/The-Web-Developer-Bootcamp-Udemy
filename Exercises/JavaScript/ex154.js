@@ -103,4 +103,4 @@ button[5].addEventListener("click", function(){
 });
 
 button[6].addEventListener("click", resetScore);
-setInterval(colorCycle, 80);
+//setInterval(colorCycle, 80);
