@@ -1,8 +1,25 @@
 var teamA=0, teamB=0, three=3, two=2, free=1;
-var teamFlag=0;
+var teamFlag=0, colorCount=0;
 
+var body = document.querySelector("body");
 var h1 = document.querySelectorAll("h1");
 var button = document.querySelectorAll("button");
+
+var colors = ["#F00000", "#BD0035", "#AE0044", "#9C0056", "#8B0067", "#6A006C", "#460071", "#2A0076", "#000080", "#003073", "#004A65", "#00584C", "#008000", "#4EAD00", "#8BBC00", "#B9D000", "#F7EB00", "#F5B000", "#F48400", "#F36300","#F24A00", "#F13700", "#F11F00", "#F11100"];
+
+
+function colorCycle()
+{
+  if(colorCount == 23)
+  {
+    colorCount = 0;
+  }
+  else
+  {
+    body.style.background = colors[colorCount];
+    colorCount++;
+  }
+}
 
 function addThree()
 {
@@ -86,3 +103,4 @@ button[5].addEventListener("click", function(){
 });
 
 button[6].addEventListener("click", resetScore);
+setInterval(colorCycle, 80);
