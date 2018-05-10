@@ -10,41 +10,61 @@ function getRandomColor()
     g = Math.floor(Math.random() * 256);
     b = Math.floor(Math.random() * 256);
 
-    arr[i] = "rgb("+r+","+g+","+b+")";
+    arr[i] = "rgb("+r+", "+g+", "+b+")";
   }
 
   return arr;
 }
 
-function pickColor()
+function pickColor(colors)
 {
   var num = Math.floor(Math.random() * colors.length);
   return num;
 }
 
-
-var colors = getRandomColor();
-var colorTile = document.querySelectorAll(".colorTile");
-var num = pickColor();
-var pickedColor = colors[num];
-var rgbDisplay = document.querySelector("#rgbDisplay");
-var h1 = document.querySelectorAll("h1");
-
-rgbDisplay.textContent = pickedColor;
-
-for(var i=0; i<colorTile.length; i++)
+function newGame()
 {
-  colorTile[i].style.backgroundColor = colors[i];
+  var colors = getRandomColor();
+  var colorTile = document.querySelectorAll(".colorTile");
+  var pickedColor = colors[pickColor(colors)];
+  console.log(pickedColor);
+  console.log(colors)
+  var rgbDisplay = document.querySelector("#rgbDisplay");
+  var h1 = document.querySelectorAll("h1");
 
-  colorTile[i].addEventListener("click", function()
+  rgbDisplay.textContent = pickedColor;
+
+  for(var i=0; i<colorTile.length; i++)
   {
-    if(pickedColor === this.style.backgroundColor)
-    {
-      h1[1].textContent = "Correct";
-    }
+    colorTile[i].style.backgroundColor = colors[i];
 
-    else{
-      h1[1].textContent = "Incorrect";
-    }
-  });
+    colorTile[i].addEventListener("click", function()
+    {
+      if(pickedColor === this.style.backgroundColor)
+      {
+        h1[1].textContent = "Correct";
+
+        for(var j=0; j<colorTile.length; j++)
+        {
+          colorTile[j].style.backgroundColor = this.style.backgroundColor;
+        }
+
+      }
+
+      else{
+        h1[1].textContent = "Incorrect";
+        console.log(this.style.backgroundColor);
+        this.style.backgroundColor = "black";
+      }
+    });
+  }
 }
+
+newGame();
+
+var button = document.querySelectorAll("button");
+button[0].addEventListener("click", function(){
+  var h1 = document.querySelectorAll("h1");
+  h1[1].textContent = "Click On Tile"
+  newGame();
+});
