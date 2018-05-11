@@ -26,20 +26,24 @@ function newGame()
 {
   var colors = getRandomColor();
   var colorTile = document.querySelectorAll(".colorTile");
-  var pickedColor = colors[pickColor(colors)];
+  var num = pickColor(colors);
+  var pickedColor = colors[num];
+  //var pickedColor = colors[pickColor(colors)];
   console.log(pickedColor);
-  console.log(colors)
+  console.log(colors);
+
   var rgbDisplay = document.querySelector("#rgbDisplay");
   var h1 = document.querySelectorAll("h1");
 
   rgbDisplay.textContent = pickedColor;
-
   for(var i=0; i<colorTile.length; i++)
   {
     colorTile[i].style.backgroundColor = colors[i];
-
+    console.log(pickedColor);
     colorTile[i].addEventListener("click", function()
     {
+      var pickedColor = colors[num];
+      console.log(pickedColor);
       if(pickedColor === this.style.backgroundColor)
       {
         h1[1].textContent = "Correct";
@@ -48,12 +52,10 @@ function newGame()
         {
           colorTile[j].style.backgroundColor = this.style.backgroundColor;
         }
-
       }
 
       else{
         h1[1].textContent = "Incorrect";
-        console.log(this.style.backgroundColor);
         this.style.backgroundColor = "black";
       }
     });
