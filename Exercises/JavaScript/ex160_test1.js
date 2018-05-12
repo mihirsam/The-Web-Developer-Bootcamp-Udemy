@@ -24,6 +24,7 @@ function pickColor(colors)
 
 var pickedColor = '';
 var colorTile = document.querySelectorAll(".colorTile");
+var button = document.querySelectorAll("button");
 
 function newGame()
 {
@@ -45,12 +46,13 @@ function newGame()
   }
 
 }
+
 function fn (){
       console.log(pickedColor);
       if(pickedColor === this.style.backgroundColor)
       {
         h1[1].textContent = "Correct";
-
+        button[0].textCount = "Play Again?";
         for(var j=0; j<colorTile.length; j++)
         {
           colorTile[j].style.backgroundColor = this.style.backgroundColor;
@@ -65,7 +67,6 @@ function fn (){
 
 newGame();
 
-var button = document.querySelectorAll("button");
 button[0].addEventListener("click", function(){
   var h1 = document.querySelectorAll("h1");
   h1[1].textContent = "Click On Tile"

@@ -13,19 +13,20 @@
 }
 
 body{
-  background-color: black;
+  background-color: AliceBlue;
 }
 
 h1{
-  color: yellow;
+  color: black;
   text-align: center;
 }
 
 button{
   width: 20%;
   height: 30px;
-  margin: 30px;
-  margin-left: 40%;
-  color: black;
-  background-color: yellow;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  margin-left: 10%;
+  color: white;
+  background-color: black;
 }
