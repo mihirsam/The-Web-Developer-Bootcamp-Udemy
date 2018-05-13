@@ -107,6 +107,9 @@ newGame();
 button[0].addEventListener("click", function(){
   h1[1].textContent = "Click On Tile";
   em[0].textContent = "New Game";
+  indexList = []
+  indexCount = 0;
+
   newGame();
 });
 
