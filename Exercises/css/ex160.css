@@ -14,11 +14,23 @@
 
 body{
   background-color: AliceBlue;
+  margin: 0px;
+  font-family: "MADE Evolve Sans EVO";
+  text-transform: uppercase;
+}
+
+em{
+  font-family: "MADE Evolve Sans EVO";
+}
+
+#rgbDisplay{
+  font-size: 40px;
 }
 
 h1{
   color: black;
   text-align: center;
+  word-spacing: 5px;
 }
 
 button{
@@ -29,4 +41,5 @@ button{
   margin-left: 10%;
   color: white;
   background-color: black;
+  border: none;
 }

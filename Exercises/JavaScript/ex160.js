@@ -36,7 +36,6 @@ var body = document.querySelector("body");
 function newGame()
 {
   var colors = getRandomColor(mode);
-  var colorTile = document.querySelectorAll(".colorTile");
   pickedColor = colors[pickColor(colors)];
   console.log(pickedColor);
   console.log(colors);
@@ -74,8 +73,8 @@ function newGame()
 
       else{
         h1[1].textContent = "Incorrect";
-        indexList[indexCount] = i;
-        indexCount++;
+        //indexList[indexCount] = i;
+        //indexCount++;
       }
     });
   }
@@ -110,6 +109,15 @@ button[0].addEventListener("click", function(){
   indexList = []
   indexCount = 0;
 
+  if(mode == 3)
+  {
+    for(var j=3; j<colorTile.length; j++)
+    {
+      indexList[indexCount] = j;
+      indexCount++;
+    }
+  }
+
   newGame();
 });
 
@@ -119,12 +127,12 @@ button[1].addEventListener("click", function(){
   mode = 3;
   indexList = []
   indexCount = 0;
-
   for(var j=3; j<colorTile.length; j++)
   {
     indexList[indexCount] = j;
     indexCount++;
   }
+
   newGame();
 });
 
